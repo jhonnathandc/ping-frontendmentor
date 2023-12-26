@@ -73,33 +73,64 @@ body {
   gap: 1.6rem;
   margin-bottom: 9.4rem;
   width: 100%;
+  position: relative;
 }
 
-.form input[type="text"] {
+.form input[type="email"] {
   font-family: "Libre Franklin";
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 300;
   color: #15202a;
 
-  max-width: 42.1rem;
+  max-width: 100%;
   width: 100%;
   padding: 1.8rem 3rem;
   border-radius: 2.8rem;
   border: 0.1rem solid #c2d3ff;
   outline: none;
+  position: relative;
 }
 
-.form input[type="text"]:focus {
+.form input[type="email"]:focus {
   border: 0.1rem solid #4c7bf3;
 }
 
-.form input[type="text"]::placeholder {
+.form input[type="email"]::placeholder {
   font-family: "Libre Franklin";
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 300;
   color: #b8c7ed;
+}
+
+.form p {
+  font-size: 1.2rem;
+  font-family: "Libre Franklin";
+  line-height: 2rem;
+  font-weight: 300;
+  position: absolute;
+  bottom: -6.5rem;
+  left: 3rem;
+  display: none;
+}
+
+.email-error input[type="email"] {
+  border: 0.1rem solid #ff5466;
+}
+
+.email-accept input[type="email"] {
+  border: 0.1rem solid #2ecc71;
+}
+
+.email-error p {
+  color: #ff5466;
+  display: block;
+}
+
+.email-accept p {
+  color: #2ecc71;
+  display: block;
 }
 
 .btn {
@@ -195,14 +226,25 @@ body {
     margin-bottom: 7.2rem;
   }
 
-  .form input[type="text"] {
+  .form input[type="email"] {
     font-size: 1.2rem;
-    max-width: 100%;
     padding: 1rem 3.2rem;
   }
 
-  .form input[type="text"]::placeholder {
+  .form input[type="email"]::placeholder {
     font-size: 1.2rem;
+  }
+
+  .email-error input[type="email"] {
+    margin-bottom: 4.2rem;
+  }
+
+  .email-accept input[type="email"] {
+    margin-bottom: 4.2rem;
+  }
+
+  .form p {
+    bottom: 3.3rem;
   }
 
   .btn {
